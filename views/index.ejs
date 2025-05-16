@@ -949,6 +949,19 @@
                </a>
                     </div>
                 </div>
+
+                <div class="package_con">
+                    <div class="item_dest">
+                        <a href="#">
+                  <img src="images/newyork.jpg" class="img-fluid">
+                  <div class="hot_deal">
+                     <strong>Fare starting From</strong>
+                     <p> New York <span>$230</span></p>
+                  </div>
+               </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -2861,3 +2874,35 @@
         popup.style.display = "none";
     }
 </script>
+
+
+<script>
+    // Function to check if the user is on a mobile device
+    function isMobileDevice() {
+        return window.innerWidth <= 767; // Adjust breakpoint as needed
+    }
+
+
+    //  Function to show the popup after 15 seconds on mobile devices
+    function showPopupAfterDelay() {
+        if (isMobileDevice()) {
+            setTimeout(function () {
+                var popup = document.getElementById("boxes");
+                if (popup) {
+                    popup.style.display = "block";
+                }
+            }, 10000); // 15 seconds delay
+        }
+    }
+
+
+
+    // Call the function on page load
+    document.addEventListener("DOMContentLoaded", showPopupAfterDelay);
+</script>
+
+<style>
+    #boxes {
+        display: none; /* Initially hide the popup */
+    }
+</style>
